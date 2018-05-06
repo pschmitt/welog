@@ -1,0 +1,3 @@
+.git*
+.autoenv.zsh
+__pycache__
