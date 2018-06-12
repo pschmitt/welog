@@ -39,7 +39,7 @@ HTTP_METHODS = [
 app = Flask(__name__)
 
 
-@app.route('/', defaults={'path': ''})
+@app.route('/', defaults={'path': ''}, methods=HTTP_METHODS)
 @app.route('/<path:path>', methods=HTTP_METHODS)
 def log_all(path):
     app.logger.info('%s %s', request.method, request.url)
